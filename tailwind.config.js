@@ -9,7 +9,8 @@ module.exports = {
         common: '#f10085',
         common2: '#F94892',
         common80: '#f10085b0',
-        lightWhite: '#EEF1F8'
+        lightWhite: '#EEF1F8',
+        lightWhite2: '#F5F4F6',
       }
     },
   },

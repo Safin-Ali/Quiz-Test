@@ -8,7 +8,7 @@ const Banner = () => {
                 <img src={BannerVector} className='max-w-full h-auto' alt="Banner Vector" />
             </div>
             <div>
-                <p className='text-slate-800 text-center'><strong>quiza help grow our active knowledge. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, perspiciatis.</strong></p>
+                <p className='text-slate-800 text-center capitalize'><strong>quiz help grow our active knowledge. help to more learning. soft skill growing.feel more confident to discuss the material.</strong></p>
             </div>
         </section>
     );

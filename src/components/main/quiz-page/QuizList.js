@@ -9,7 +9,7 @@ const QuizList = () => {
         <section className='my-10'>
             <h2 className='text-center'>Quiz Of {name}</h2>
             {
-                questions.map((question,index) => <QuizCard index={index+1} key={question.id} data={question}></QuizCard>)
+                questions.map((question,index) => <QuizCard key={question.id} index={index+1} data={question}></QuizCard>)
             }
         </section>
     );

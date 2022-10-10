@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     {path:'/subjects',element:<Main></Main>,children:[
       {path:'/subjects',element:<QuizSubjects></QuizSubjects>},
     ]},
-    {path:'/:id', loader:async ({params})=> fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`),element:<QuizList></QuizList>}
+    {path:'/:sub/:id', loader:async ({params})=> fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`),element:<QuizList></QuizList>}
   ]},
 ])
 root.render(

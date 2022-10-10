@@ -1,0 +1,10 @@
+@font-face {
+    font-family: MonoLisa;
+    src: url(../../../custom-font/monalisa-font/MonoLisa-Black.woff) format("woff");
+    font-display: fallback;
+  }
+
+  .font-mona{
+    font-family: 'MonoLisa',sans-serif;
+  }
+  

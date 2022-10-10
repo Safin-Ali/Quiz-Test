@@ -11,7 +11,7 @@ function QuizSubject ({data,func}) {
             </div>
             <div className='mt-5 text-center'>
                 <p className='text-slate-900'>{name}</p>
-                <button className='my-4 bg-common2 px-2 py-1 rounded-md text-slate-50 hover:bg-common duration-300' onClick={()=>func(id)}>Start Quiz<ArrowSmallRightIcon className='w-6 inline-block'></ArrowSmallRightIcon> </button>
+                <button className='my-4 bg-common2 px-2 py-1 rounded-md text-slate-50 hover:bg-common duration-300' onClick={()=>func(data)}>Start Quiz<ArrowSmallRightIcon className='w-6 inline-block'></ArrowSmallRightIcon> </button>
             </div>
         </div>
     )
@@ -28,8 +28,8 @@ const QuizSubjects = () => {
 
     const navigateQuizPage = useNavigate();
 
-    const QuizPageBtn = (id) => {
-        navigateQuizPage(`/${id}`)
+    const QuizPageBtn = ({id,name}) => {
+        navigateQuizPage(`/${name}/${id}`)
     }
     return (
         <section className='my-10 mx-20'>
