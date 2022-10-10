@@ -19,8 +19,7 @@ function QuizSubject ({data,func}) {
 
 const QuizSubjects = () => {
     const [data,setData] = useState([]);
-    const singlrData = useLoaderData();
-
+    
     useEffect(()=> {
         fetch('https://openapi.programming-hero.com/api/quiz')
         .then(res => res.json())
@@ -32,8 +31,6 @@ const QuizSubjects = () => {
     const QuizPageBtn = (id) => {
         navigateQuizPage(`/${id}`)
     }
-
-    console.log(data)
     return (
         <section className='my-10 mx-20'>
             <h1 className='text-center'>Let's Checkout Quiz</h1>
