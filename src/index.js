@@ -4,10 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Banner from './components/header/banner/Banner';
+import Main from './components/main/Main';
+import QuizSubjects from './components/main/quiz-subject/QuizSubjects';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([
-  {path:'/',element: <App></App>}
+  {path:'/',element: <App></App>,children:[
+    {path:'/',element:<Banner></Banner>},
+    {path:'/subjects',element:<Main></Main>,children:[
+      {path:'/subjects',element:<QuizSubjects></QuizSubjects>},
+    ]},
+  ]},
 ])
 root.render(
   <RouterProvider router={router}></RouterProvider>
