@@ -1,0 +1,10 @@
+.text-default{
+    color: #F10086;
+}
+.bg-nav{
+    background: #eef1f8;
+    transition: color 0.3s linear;
+}
+.nav-link:hover{
+    color: #F10086;
+}
