@@ -1,11 +1,12 @@
 import React from 'react';
 
-const QuizCard = ({data}) => {
+const QuizCard = ({data,index}) => {
     const {correctAnswer,id,question,options} = data;
+    // console.table(options)
     return (
-        <div className='shadow mx-auto w-1/2'>
+        <div className='shadow mx-auto my-5 w-1/2'>
             <div className='mx-10 text-center'>
-            <p>{question}</p>
+            <p>Quiz: {index} {question}</p>
             </div>
         </div>
     );
