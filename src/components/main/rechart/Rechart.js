@@ -7,6 +7,7 @@ const Rechart = () => {
     const {data} = useLoaderData();
     return (
         <section className='flex flex-col justify-center items-center h-screen'>
+          <ResponsiveContainer width="80%" height="70%">
          <BarChart
           width={500}
           height={300}
@@ -25,6 +26,7 @@ const Rechart = () => {
           <Legend />
           <Bar dataKey="total" stackId="a" fill="#8884d8" />
         </BarChart>
+        </ResponsiveContainer>
         </section>
     );
 };

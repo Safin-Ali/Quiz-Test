@@ -3,8 +3,8 @@ import BannerVector from     '../../../image/vector-01.jpg'
 
 const Banner = () => {
     return (
-        <section className='my-14 grid grid-cols-2 container mx-auto items-center gap-10'>
-            <div className='border-r-2 border-common80'>
+        <section className='my-14 grid grid-cols-1 sm:grid-cols-2 container mx-auto items-center gap-10'>
+            <div className='border-b-2 sm:border-r-2 sm:border-b-0 border-common80'>
                 <img src={BannerVector} className='max-w-full h-auto' alt="Banner Vector" />
             </div>
             <div>

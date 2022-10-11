@@ -12,6 +12,7 @@ module.exports = {
         lightWhite: '#EEF1F8',
         lightWhite2: '#F5F4F6',
         lightWhite3: '#F7F7F7',
+        lightWhite4: '#EEF1F8',
       }
     },
   },
