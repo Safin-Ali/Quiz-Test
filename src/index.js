@@ -9,6 +9,7 @@ import Main from './components/main/Main';
 import QuizSubjects from './components/main/quiz-subject/QuizSubjects';
 import QuizList from './components/main/quiz-page/QuizList';
 import NotFound from './components/404-Not-Found/NotFound';
+import Example from './components/main/rechart/Rechart';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([
@@ -18,6 +19,9 @@ const router = createBrowserRouter([
     {path:'/subjects',element:<Main></Main>,children:[
       {path:'/subjects',element:<QuizSubjects></QuizSubjects>},
     ]},
+
+    {path:'/statics',loader:async ()=> fetch('https://openapi.programming-hero.com/api/quiz'),element:<Example></Example>},
+
     {path:'/:sub/:id', loader:async ({params})=> fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`),element:<QuizList></QuizList>}
   ]},
 ])

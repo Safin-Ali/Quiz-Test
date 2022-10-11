@@ -1,6 +1,7 @@
 import { FaceFrownIcon } from '@heroicons/react/24/outline';
 import React from 'react';
 
+
 const NotFound = () => {
     return (
         <section className='flex flex-col items-center h-screen justify-center'>
@@ -9,5 +10,6 @@ const NotFound = () => {
         </section>
     );
 };
+
 
 export default NotFound;
