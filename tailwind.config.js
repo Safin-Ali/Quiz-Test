@@ -11,6 +11,7 @@ module.exports = {
         common80: '#f10085b0',
         lightWhite: '#EEF1F8',
         lightWhite2: '#F5F4F6',
+        lightWhite3: '#F7F7F7',
       }
     },
   },

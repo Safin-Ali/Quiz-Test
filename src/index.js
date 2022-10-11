@@ -10,6 +10,7 @@ import QuizSubjects from './components/main/quiz-subject/QuizSubjects';
 import QuizList from './components/main/quiz-page/QuizList';
 import NotFound from './components/404-Not-Found/NotFound';
 import Example from './components/main/rechart/Rechart';
+import QuesToAns from './components/main/custom-quesions/QuesToAns';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
   {path:'/',element: <App></App>,children:[
     {path:'/',element:<Banner></Banner>},
     {path:'/home',element:<Banner></Banner>},
+    {path:'/blog',element:<QuesToAns></QuesToAns>},
     {path:'/subjects',element:<Main></Main>,children:[
       {path:'/subjects',element:<QuizSubjects></QuizSubjects>},
     ]},
