@@ -8,9 +8,11 @@ import Banner from './components/header/banner/Banner';
 import Main from './components/main/Main';
 import QuizSubjects from './components/main/quiz-subject/QuizSubjects';
 import QuizList from './components/main/quiz-page/QuizList';
+import NotFound from './components/404-Not-Found/NotFound';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([
+  {path:'/*',element:<NotFound></NotFound>},
   {path:'/',element: <App></App>,children:[
     {path:'/',element:<Banner></Banner>},
     {path:'/subjects',element:<Main></Main>,children:[

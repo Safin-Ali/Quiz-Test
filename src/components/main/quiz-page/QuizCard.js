@@ -4,12 +4,24 @@ import "./quiz-card.css";
 import {ToastContainer,toast} from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 
+const customId = "custom-id-yes";
 
 function Questions ({option,correctAnswer}) {
     const choose = 'choose';
     const randomID = Math.random()*100+1;
     function handleQuizAnswer () {
-        const compare = correctAnswer === option ? true : false;
+        if(correctAnswer === option){
+            toast.success('Right Answer', {
+                position: toast.POSITION.TOP_CENTER,
+                toastId: customId
+            });
+        }
+        else{
+            toast.error('Wrong Answer', {
+                position: toast.POSITION.TOP_CENTER,
+                toastId: customId
+            });
+        }
     }
     
     return(
@@ -26,7 +38,7 @@ function Questions ({option,correctAnswer}) {
 
 const QuizCard = ({data,index}) => {
     const {correctAnswer,question,options} = data;
-    const [showAnsBool,setShowAnsBool] = useState(false)
+    const [showAnsBool,setShowAnsBool] = useState(true)
     
     function showAns () {
         const getAns = options.find(ot => correctAnswer === ot);
@@ -38,7 +50,7 @@ const QuizCard = ({data,index}) => {
             <div className='mx-10 flex justify-center items-center'>
                 <p className='font-mona'>Quiz: {index} {question}</p>
                 <div>
-                <EyeIcon onClick={showAns} className='cursor-pointer w-8'></EyeIcon>
+                <EyeIcon onClick={showAns} className='cursor-pointer w-8 mx-5'></EyeIcon>
                 </div>
             </div>
 
@@ -51,6 +63,7 @@ const QuizCard = ({data,index}) => {
                    options.map((option,idx) =>  <Questions key={idx} correctAnswer={correctAnswer} option={option}></Questions>)
                 }
             </div>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
