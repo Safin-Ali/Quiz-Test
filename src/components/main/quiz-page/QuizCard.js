@@ -25,7 +25,7 @@ function Questions ({option,correctAnswer}) {
     }
     
     return(
-        <div className={`border border-2 quiz-sec rounded-md `}>
+        <div className={'border-2 quiz-sec rounded-md'}>
             <div className='p-5 flex justify-center items-center h-full'>
             <div><input onClick={handleQuizAnswer} value={correctAnswer} className='mr-2' name={choose} id={randomID} type="radio"/></div>
             <div>
@@ -41,7 +41,6 @@ const QuizCard = ({data,index}) => {
     const [showAnsBool,setShowAnsBool] = useState(true)
     
     function showAns () {
-        const getAns = options.find(ot => correctAnswer === ot);
         setShowAnsBool(!showAnsBool)
     }
 

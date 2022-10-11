@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import {ArrowSmallRightIcon } from '@heroicons/react/24/solid'
 
 function QuizSubject ({data,func}) {
-    const {id,logo,name,total} = data;
+    const {logo,name,total} = data;
     return(
         <div className='border-2 rounded-md p-2 relative'>
             <div className='absolute -top-3 -right-3'>
